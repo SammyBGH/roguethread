@@ -1,0 +1,10 @@
+.drawer{
+  position: fixed; right:0; top:0; bottom:0; width: 360px; background:#fff; border-left:4px solid #1A1A1A;
+  box-shadow: -10px 0 0 #1A1A1A; padding:12px; display:flex; flex-direction:column; gap:10px;
+}
+.drawer__head{ display:flex; justify-content:space-between; align-items:center; }
+.drawer__list{ flex:1; overflow:auto; display:grid; gap:10px; }
+.drawer__row{ display:grid; grid-template-columns: 64px 1fr auto; gap:10px; align-items:center; border:3px solid #1A1A1A; padding:8px; }
+.drawer__thumb{ height:48px; background:#FFF5E7; display:grid; place-items:center; border:3px solid #1A1A1A; }
+.drawer__foot{ display:flex; justify-content:space-between; align-items:center; }
+.drawer__checkout{ border:3px solid #1A1A1A; padding:8px 12px; background:#EB2007; color:#161513; text-decoration:none; font-weight:900; }

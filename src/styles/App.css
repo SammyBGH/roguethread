@@ -1,0 +1,17 @@
+.app {
+  min-height: 100vh;
+  background: #fff5e7; /* cream background */
+  color: #161513;      /* coal text */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Optional: smooth transition for theme/color changes */
+.app, .app * {
+  transition: background-color 0.3s, color 0.3s;
+}

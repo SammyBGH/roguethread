@@ -1,0 +1,142 @@
+/* ===============================
+   HEADER STYLING
+   =============================== */
+.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 4px solid #1a1a1a;
+  display: flex;
+  justify-content: space-between; /* ensures brand left, CTA right */
+  align-items: center;
+  padding: 16px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  gap: 16px;
+}
+
+/* Brand / Logo */
+.hdr__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.hdr__logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  color: #161513;
+}
+
+/* Navigation Links */
+.hdr__nav {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.hdr__link {
+  border: 3px solid #1a1a1a;
+  background: #d7a900;
+  color: #161513;
+  padding: 8px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+.hdr__link:hover {
+  background: #e0b800;
+  transform: translateY(-2px);
+}
+
+.hdr__link:active {
+  transform: translateY(0);
+}
+
+/* CTA / Right side */
+.hdr__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto; /* ensures it's pushed far right on desktop */
+}
+
+/* Hamburger Menu */
+.hdr__menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hdr__menu-toggle .bar {
+  height: 3px;
+  background: #161513;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.hdr__menu-toggle .bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.hdr__menu-toggle .bar.open:nth-child(2) {
+  opacity: 0;
+}
+.hdr__menu-toggle .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile Navigation Overlay */
+.hdr__nav.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px; /* below header */
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 4px solid #1a1a1a;
+  padding: 16px 0;
+  gap: 12px;
+  z-index: 100;
+}
+
+.hdr__nav.active .hdr__link {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+@media (max-width: 900px) {
+  .hdr__nav {
+    display: none;
+  }
+
+  .hdr__menu-toggle {
+    display: flex;
+    position: relative;
+    left: 4px;
+  }
+
+  .hdr__cta {
+    margin-left: 0; /* resets for mobile layout */
+  }
+}
+
+@media (max-width: 520px) {
+  .hdr__logo {
+    font-size: 1.3rem;
+  }
+
+  .hdr__cta {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,6 @@
+.marquee { overflow: hidden; border: 3px solid #1A1A1A; background: #FF6A00; }
+.marquee__track {
+  white-space: nowrap; padding: 6px 0; font-weight: 800; letter-spacing: .5px;
+  animation: slide 18s linear infinite;
+}
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }

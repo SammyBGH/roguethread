@@ -1,0 +1,67 @@
+.adm {
+  padding: 24px;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.adm input {
+  border: 2px solid #1a1a1a;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.adm input:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 5px rgba(100, 108, 255, 0.5);
+}
+
+.adm button {
+  border: 2px solid #1a1a1a;
+  background: #d7a900;
+  padding: 10px 16px;
+  font-weight: 800;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.25s, transform 0.15s;
+}
+
+.adm button:hover {
+  background-color: #ffbf00;
+  transform: translateY(-2px);
+}
+
+.adm__list {
+  display: grid;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.adm__card {
+  border: 2px solid #1a1a1a;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff5e7;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.adm__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Optional light theme support */
+@media (prefers-color-scheme: light) {
+  .adm__card {
+    background: #f9f9f9;
+    border-color: #ccc;
+  }
+  .adm input {
+    border-color: #ccc;
+  }
+  .adm button {
+    border-color: #aaa;
+  }
+}

@@ -1,0 +1,5 @@
+.sticker {
+  border: 3px solid #1A1A1A; padding: 10px 14px; background: #FF6A00;
+  font-weight: 900; box-shadow: 6px 6px 0 #1A1A1A; cursor: pointer;
+}
+.sticker:hover { transform: rotate(-1deg); }

@@ -1,0 +1,211 @@
+/* ===============================
+   HOME PAGE STYLING
+   =============================== */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #161513;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===============================
+   Highlights Section
+   =============================== */
+.home__highlights {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px 20px;
+  background: #fef6e7; /* lighter mustard */
+  border-top: 2px solid #1a1a1a;
+  border-bottom: 2px solid #1a1a1a;
+}
+
+.home__highlights .highlight {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #161513;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 840px) {
+  .home__highlights {
+    padding: 18px 15px;
+  }
+
+  .home__highlights .highlight {
+    font-size: 0.75rem;
+  }
+}
+
+/* ===============================
+   Brand Story Section
+   =============================== */
+.home__story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 60px 20px;
+  align-items: center;
+}
+
+.story__img img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 4px solid #1a1a1a;
+  background: #fff5e7;
+  transition: transform 0.3s ease;
+  max-height: 400px;
+}
+
+.story__img img:hover {
+  transform: scale(1.03);
+}
+
+.story__text h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.story__text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive story */
+@media (max-width: 840px) {
+  .home__story {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* ===============================
+   Social Feed Section
+   =============================== */
+.home__social {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home__social h2 {
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.social__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.social__card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social__card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 3px solid #1a1a1a;
+  object-fit: cover;
+}
+
+.social__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .social__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  .social__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile aesthetic grid */
+@media (max-width: 520px) {
+  .social__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* finer columns */
+    grid-auto-rows: 160px; /* base row height */
+    gap: 10px;
+  }
+
+  .social__card {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  /* Masonry pattern that repeats every 8 items */
+  .social__card:nth-child(8n + 1) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .social__card:nth-child(8n + 2) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .social__card:nth-child(8n + 3) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  .social__card:nth-child(8n + 4) {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+  .social__card:nth-child(8n + 5) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .social__card:nth-child(8n + 6) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  .social__card:nth-child(8n + 7) {
+    grid-column: span 3;
+    grid-row: span 1;
+  }
+  .social__card:nth-child(8n + 8) {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+
+
+
+/* ===============================
+   Marquee Section
+   =============================== */
+.home .marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0;
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}

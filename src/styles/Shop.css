@@ -1,0 +1,64 @@
+.shop {
+  width: 100%;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.shop__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.shop__grid > * {
+  display: flex;
+  flex-direction: column;
+  aspect-ratio: 1 / 1; /* ensures items are square */
+}
+
+/* Loading / Error states */
+.shop__loading,
+.shop__error {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .shop__grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .shop__grid > * {
+    aspect-ratio: 1 / 1; /* keep square shape */
+  }
+}
+
+@media (max-width: 620px) {
+  .shop__grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .shop__grid > * {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .shop__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop__grid > * {
+    aspect-ratio: auto; /* allow full width single column */
+  }
+}

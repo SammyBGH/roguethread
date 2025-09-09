@@ -1,0 +1,26 @@
+.swatch {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+
+.swatch__dot {
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(0,0,0,0.15); /* subtle border */
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+.swatch__dot:hover {
+  transform: scale(1.1);
+  border-color: #333;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.swatch__dot.is-active {
+  border: 2px solid #333;
+  box-shadow: 0 0 0 3px #d7a900; /* highlight ring */
+  transform: scale(1.1);
+}

@@ -1,0 +1,139 @@
+/* Checkout.css */
+
+.chk {
+  padding: 36px;
+  max-width: 720px;
+  width: 90%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  font-family: 'Arial', sans-serif;
+}
+
+.chk h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 28px;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+.chk__form {
+  display: grid;
+  gap: 18px;
+}
+
+.chk__form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.chk__form input,
+.chk__form textarea,
+.chk__form select {
+  border: 2px solid #ccc;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.25s ease;
+  background-color: #fdfdfd;
+  color: black;
+}
+
+.chk__form input:focus,
+.chk__form textarea:focus,
+.chk__form select:focus {
+  border-color: #36b24a;
+  box-shadow: 0 4px 10px rgba(54, 178, 74, 0.15);
+  background-color: #fff;
+  transform: scale(1.01);
+}
+
+.chk__form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.chk__form button {
+  border: none;
+  background: #36b24a;
+  color: #fff;
+  padding: 14px;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.chk__form button:hover {
+  background: #2e9c3d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(46, 156, 61, 0.35);
+}
+
+.chk__status {
+  margin-top: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #e9f7ef;
+  box-shadow: 0 4px 12px rgba(54, 178, 74, 0.15);
+  animation: fadeIn 0.3s ease-in-out, fadeOut 0.3s ease-in-out 4.7s forwards;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; transform: translateY(-6px); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chk {
+    padding: 24px;
+    width: 95%;
+    margin: 30px auto;
+  }
+
+  .chk h2 {
+    font-size: 26px;
+  }
+
+  .chk__form input,
+  .chk__form textarea,
+  .chk__form select,
+  .chk__form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Autofill override */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fdfdfd inset;
+  -webkit-text-fill-color: #1a1a1a;
+  transition: background-color 5000s ease-in-out 0s;
+  border-color: #36b24a;
+}
+
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  box-shadow: 0 0 0px 1000px #fdfdfd inset;
+  -moz-text-fill-color: #1a1a1a;
+  border-color: #36b24a;
+}

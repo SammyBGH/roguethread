@@ -1,0 +1,7 @@
+.zz {
+  height: 14px;
+  background:
+    linear-gradient(-45deg, #1A1A1A 8px, transparent 0) 0 0/14px 14px,
+    linear-gradient(45deg,  #1A1A1A 8px, transparent 0) 0 0/14px 14px;
+  background-repeat: repeat-x;
+}
